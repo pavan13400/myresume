@@ -1,0 +1,140 @@
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --text: #1b263b;
+  --muted: #5e6b85;
+  --accent: #2f6fed;
+  --accent-soft: #e8efff;
+  --border: #d9e2f2;
+  --shadow: 0 10px 25px rgba(27, 38, 59, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #edf2ff 0%, var(--bg) 45%, #f9fbff 100%);
+  line-height: 1.55;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: min(900px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.6rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tags li {
+  background: var(--accent-soft);
+  color: #21438f;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.9rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    max-width: 220px;
+  }
+}
